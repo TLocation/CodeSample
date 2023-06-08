@@ -2,7 +2,6 @@ package com.location.java.algorithm;
 
 
 public class TestMain {
-    @org.junit.Test
     public void test() {
         int[] array = {12, 5, 3, 8, 1, 1};
 //        quick(array,0,array.length - 1);

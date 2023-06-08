@@ -18,7 +18,6 @@ import com.location.java.design.zerenlian.sample.java.CInterceptor;
 import com.location.java.design.zerenlian.sample.java.ChinClient;
 import design.zerenlian.Request;
 import design.zerenlian.Response;
-import org.junit.Test;
 
 public class Main {
 
@@ -26,7 +25,6 @@ public class Main {
     /**
      * 责任链模式
      */
-    @Test
     public void testZeRenLian(){
         ChinClient client = new ChinClient();
         client.addInterceptor(new AInterceptor());
@@ -39,7 +37,6 @@ public class Main {
     /**
      * 代理模式
      */
-    @Test
     public void daili() {
         ProxyFactory proxy = new ProxyFactory();
         ShopStore shopStore = new BannerShopStore();
@@ -55,7 +52,6 @@ public class Main {
      * 通过 {@link PhoneFactory#createPhone(PhoneFactory.PhoneType)}函数创建实际的手机对象
      * 如果需要再增加一个手如果需要再增加一个手机机 则需要修改{@link PhoneFactory}的函数
      */
-    @Test
     public void staticFactory(){
         Phone meizuPhone = PhoneFactory.createPhone(PhoneFactory.PhoneType.MEIZU);
         Phone xiaomiPhone = PhoneFactory.createPhone(PhoneFactory.PhoneType.XIAOMI);
@@ -69,7 +65,6 @@ public class Main {
      * @see MeizuPhoneFactory
      * @see XiaomiPhoneFactory
      */
-    @Test
     public  void methodFactory(){
         IPhoneFactory xiaomiFactory = new XiaomiPhoneFactory();
         IPhoneFactory meizuFactory = new MeizuPhoneFactory();
@@ -84,7 +79,6 @@ public class Main {
      * @see Charging
      * @see PhoneBoxFactory
      */
-    @Test
     public void abstractFactory(){
         PhoneBoxFactory xiaomiPhoneBox = new XiaomiPhoneBoxFactory();
         PhoneBoxFactory meizuPhoneBox = new MeizuPhoneBoxFactory();
