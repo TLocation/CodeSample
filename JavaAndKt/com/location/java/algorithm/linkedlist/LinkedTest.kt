@@ -145,4 +145,20 @@ class LinkedTest {
     }
 
 
+    @Test
+    fun ringLinkNodeCopyTest(){
+        val node1 = com.location.java.algorithm.linkedlist.ring.Node(1)
+        val node2 = com.location.java.algorithm.linkedlist.ring.Node(1)
+        val node3 = com.location.java.algorithm.linkedlist.ring.Node(1)
+        node1.next = node2
+        node2.next = node3
+        node3.next = node1
+        val newNode = node1.copy()
+        assertFalse(newNode == node1)
+        assertFalse(newNode.next == node2)
+        assertFalse(newNode.next?.next == node3)
+        assertTrue(newNode.next?.next?.next == newNode)
+    }
+
+
 }

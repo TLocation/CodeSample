@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c80410f-bb27-4e6e-86bf-e4479dd2c4c7" name="变更" comment="添加链表单元测试">
+    <list default="true" id="6c80410f-bb27-4e6e-86bf-e4479dd2c4c7" name="变更" comment="单链表判断是否是回文">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com/location/java/algorithm/linkedlist/LinkedTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/com/location/java/algorithm/linkedlist/LinkedTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/location/java/algorithm/linkedlist/SingleLinkTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/com/location/java/algorithm/linkedlist/SingleLinkTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/location/java/algorithm/linkedlist/ring/RingSingleLinkTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/com/location/java/algorithm/linkedlist/ring/RingSingleLinkTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +88,7 @@
       <recent name="com.location.java.design.prototype" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LinkedTest">
+  <component name="RunManager" selected="JUnit.LinkedTest.ringLinkNodeCopyTest">
     <configuration name="LinkedTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaAndKt" />
       <extension name="coverage">
@@ -120,6 +120,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LinkedTest.ringLinkNodeCopyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaAndKt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.location.java.algorithm.linkedlist.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.location.java.algorithm.linkedlist" />
+      <option name="MAIN_CLASS_NAME" value="com.location.java.algorithm.linkedlist.LinkedTest" />
+      <option name="METHOD_NAME" value="ringLinkNodeCopyTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LinkedTest.testTwoWayLinked" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaAndKt" />
       <extension name="coverage">
@@ -143,20 +159,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SingleLinkTestKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.location.java.algorithm.linkedlist.SingleLinkTestKt" />
-      <module name="JavaAndKt" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LinkedTest.ringLinkNodeCopyTest" />
         <item itemvalue="JUnit.LinkedTest" />
         <item itemvalue="JUnit.LinkedTest.isSingleLinkPalindrome" />
         <item itemvalue="JUnit.LinkedTest.testTwoWayLinked" />
         <item itemvalue="Kotlin.RingSingleLinkTestKt" />
-        <item itemvalue="Kotlin.SingleLinkTestKt" />
       </list>
     </recent_temporary>
   </component>
@@ -246,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686300815622</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="单链表判断是否是回文">
+      <created>1686309431059</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1686309431059</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -275,7 +291,8 @@
     <MESSAGE value="add" />
     <MESSAGE value="单向链表 环形链表 双向链表的添加 删除 翻转 遍历" />
     <MESSAGE value="添加链表单元测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加链表单元测试" />
+    <MESSAGE value="单链表判断是否是回文" />
+    <option name="LAST_COMMIT_MESSAGE" value="单链表判断是否是回文" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -284,6 +301,11 @@
           <properties class="java.util.ConcurrentModificationException" package="java.util" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/com/location/java/algorithm/linkedlist/LinkedTest.kt</url>
+          <line>159</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

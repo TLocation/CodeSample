@@ -3,7 +3,7 @@ package com.location.java.algorithm.linkedlist.ring
 /**
  * 环形链表 尾结点的next是头节点
  */
-class Node(var data: Int) {
+class Node(val data: Int) {
     companion object{
         private var sId = 0
     }
@@ -12,6 +12,20 @@ class Node(var data: Int) {
 
     override fun toString(): String {
         return "Node(id=$id, data=$data)"
+    }
+
+    fun copy(cacheMap:MutableMap<Int, Node>? = null):Node{
+        return if(cacheMap?.containsKey(id) == true){
+            cacheMap[id]!!
+        }else{
+            Node(data).apply {
+                next = this@Node.next?.copy(
+                    (cacheMap?: mutableMapOf()).also {
+                        it[this@Node.id] = this
+                    }
+                )
+            }
+        }
     }
 }
 
