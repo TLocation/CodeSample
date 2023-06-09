@@ -3,7 +3,7 @@ package com.location.java.algorithm.linkedlist
 /**
  * 单向链表
  */
-private class Node(var data: Int) {
+class Node(var data: Int) {
     companion object{
         private var sId = 0
     }
@@ -16,9 +16,11 @@ private class Node(var data: Int) {
 }
 
 
-private class NoteList(){
-    private var head: Node? = null
-    private var tail: Node? = null
+class NodeList(){
+    var head: Node? = null
+        private set
+    var tail: Node? = null
+        private set
 
     fun append(node: Node){
         if(head == null){
@@ -87,7 +89,7 @@ private class NoteList(){
 }
 
 private fun main() {
-    val nodeList = NoteList()
+    val nodeList = NodeList()
     val node3 = Node(3)
     with(nodeList){
         append(Node(1))

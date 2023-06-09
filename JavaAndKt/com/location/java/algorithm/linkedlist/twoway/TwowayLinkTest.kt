@@ -1,7 +1,7 @@
 package com.location.java.algorithm.linkedlist.twoway
 
 
-private class Node(var data: Int) {
+class Node(var data: Int) {
     companion object{
         private var sId = 0
     }
@@ -15,9 +15,11 @@ private class Node(var data: Int) {
 }
 
 
-private class NoteList(){
-    private var head: Node? = null
-    private var tail: Node? = null
+class NodeList(){
+    var head: Node? = null
+        private set
+    var tail: Node? = null
+        private set
 
     fun append(node: Node){
         if(head == null){
@@ -48,6 +50,9 @@ private class NoteList(){
                 tail
             }
             head = delete.next
+            if(tail == head){
+                tail?.prev = null
+            }
             return true
         }
         var current = head
@@ -92,13 +97,11 @@ private class NoteList(){
     }
 
 
-    fun printLink(){
-        print()
-    }
+
 }
 
 private fun main() {
-    val nodeList = NoteList()
+    val nodeList = NodeList()
     val node3 = Node(3)
     with(nodeList){
         append(Node(1))
@@ -108,10 +111,10 @@ private fun main() {
         append(Node(5))
     }
 
-    nodeList.printLink()
+    nodeList.print()
     nodeList.reverse()
     println("reverse")
-    nodeList.printLink()
+    nodeList.print()
 
 
 //    println("delete ")
