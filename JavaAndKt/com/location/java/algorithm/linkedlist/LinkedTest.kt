@@ -1,6 +1,6 @@
 package com.location.java.algorithm.linkedlist
 
-import org.junit.Assert.assertEquals
+import org.junit.Assert.*
 import org.junit.Test
 
 class LinkedTest {
@@ -110,6 +110,38 @@ class LinkedTest {
         nodeList.delete(node2)
         assertEquals(nodeList.head, null)
         assertEquals(nodeList.tail, null)
+    }
+
+    @Test
+    fun isSingleLinkPalindrome(){
+        val list = NodeList().apply {
+            append(Node(1))
+            append(Node(2))
+            append(Node(3))
+            append(Node(2))
+            append(Node(1))
+        }
+        assertTrue(list.isPalindrome())
+
+        val list2 = NodeList().apply {
+            append(Node(1))
+            append(Node(2))
+            append(Node(2))
+            append(Node(1))
+        }
+        assertTrue(list2.isPalindrome())
+
+        val list3 = NodeList()
+        assertTrue(list3.isPalindrome())
+        list3.append(Node(1))
+        assertTrue(list3.isPalindrome())
+        list3.append(Node(1))
+        assertTrue(list3.isPalindrome())
+        list3.append(Node(3))
+        assertFalse(list3.isPalindrome())
+        list3.append(Node(1))
+        list3.append(Node(1))
+        assertTrue(list3.isPalindrome())
     }
 
 

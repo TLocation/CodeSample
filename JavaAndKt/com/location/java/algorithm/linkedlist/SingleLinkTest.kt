@@ -3,7 +3,7 @@ package com.location.java.algorithm.linkedlist
 /**
  * 单向链表
  */
-class Node(var data: Int) {
+class Node(val data: Int) {
     companion object{
         private var sId = 0
     }
@@ -12,6 +12,10 @@ class Node(var data: Int) {
 
     override fun toString(): String {
         return "Node(id=$id, data=$data)"
+    }
+
+    fun copy():Node = Node(data).apply {
+        next = this@Node.next?.copy()
     }
 }
 
@@ -86,6 +90,62 @@ class NodeList(){
             node = node.next
         }
     }
+
+
+    /**
+     * 判断是否是回文字符串
+     * test:
+     *      1221 true
+     *      12321 true
+     *      1212 false
+     * 思路
+     * 使用双指针
+     * 第一个指针每次前进两次
+     * 第二个指针前进一次
+     * 当第一个指针前进结束后就是在链表的末尾
+     * 此时第二个指针正好在中间
+     * 反转前面的字符串
+     * 即 1221 变为 2121
+     *
+     */
+    fun isPalindrome(temp: Boolean = true):Boolean{
+        val head = if(temp){
+            this.head?.copy()
+        }else{
+            this.head
+        }
+        return innerIsPalindrome(head)
+    }
+
+    private fun innerIsPalindrome(head:Node?): Boolean {
+        if (head == null || head == tail) {
+            return true
+        }
+        var prev: Node? = null
+        var fast: Node? = head
+        var slow: Node? = head
+        while (fast?.next != null) {
+            fast = fast.next?.next
+            val slowNextTemp = slow?.next
+            slow?.next = prev
+            prev = slow
+            slow = slowNextTemp
+        }
+        if (fast != null) {
+            slow = slow?.next
+        }
+        while (slow != null && prev != null) {
+            if (slow.data != prev.data) {
+                return false
+            }
+            slow = slow.next
+            prev = prev.next
+        }
+
+        return slow == null && prev == null
+    }
+
+
 }
 
 private fun main() {

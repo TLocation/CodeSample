@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c80410f-bb27-4e6e-86bf-e4479dd2c4c7" name="变更" comment="单向链表 环形链表 双向链表的添加 删除 翻转 遍历">
+    <list default="true" id="6c80410f-bb27-4e6e-86bf-e4479dd2c4c7" name="变更" comment="添加链表单元测试">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/location/java/algorithm/linkedlist/LinkedTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/com/location/java/algorithm/linkedlist/LinkedTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com/location/java/algorithm/linkedlist/SingleLinkTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/com/location/java/algorithm/linkedlist/SingleLinkTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/location/java/algorithm/linkedlist/ring/RingSingleLinkTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/com/location/java/algorithm/linkedlist/ring/RingSingleLinkTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/location/java/algorithm/linkedlist/twoway/TwowayLinkTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/com/location/java/algorithm/linkedlist/twoway/TwowayLinkTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +39,7 @@
     <setting file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/io/FileInputStream.java" root0="SKIP_INSPECTION" />
     <setting file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/io/FilterInputStream.java" root0="SKIP_INSPECTION" />
     <setting file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/io/InputStream.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/junit/junit/4.13.2/junit-4.13.2.jar!/org/junit/Assert.class" root0="SKIP_INSPECTION" />
   </component>
   <component name="KotlinCodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
@@ -69,7 +69,7 @@
     "project.structure.last.edited": "全局库",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "yiiguxing.plugin.translate"
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -104,6 +104,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LinkedTest.isSingleLinkPalindrome" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaAndKt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.location.java.algorithm.linkedlist.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.location.java.algorithm.linkedlist" />
+      <option name="MAIN_CLASS_NAME" value="com.location.java.algorithm.linkedlist.LinkedTest" />
+      <option name="METHOD_NAME" value="isSingleLinkPalindrome" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LinkedTest.testTwoWayLinked" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaAndKt" />
       <extension name="coverage">
@@ -134,20 +150,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TwowayLinkTestKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.location.java.algorithm.linkedlist.twoway.TwowayLinkTestKt" />
-      <module name="JavaAndKt" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.LinkedTest" />
+        <item itemvalue="JUnit.LinkedTest.isSingleLinkPalindrome" />
         <item itemvalue="JUnit.LinkedTest.testTwoWayLinked" />
         <item itemvalue="Kotlin.RingSingleLinkTestKt" />
         <item itemvalue="Kotlin.SingleLinkTestKt" />
-        <item itemvalue="Kotlin.TwowayLinkTestKt" />
       </list>
     </recent_temporary>
   </component>
@@ -230,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686295287464</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="添加链表单元测试">
+      <created>1686300815622</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1686300815622</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -258,7 +274,8 @@
     <MESSAGE value="[设计模式] 原型模式" />
     <MESSAGE value="add" />
     <MESSAGE value="单向链表 环形链表 双向链表的添加 删除 翻转 遍历" />
-    <option name="LAST_COMMIT_MESSAGE" value="单向链表 环形链表 双向链表的添加 删除 翻转 遍历" />
+    <MESSAGE value="添加链表单元测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加链表单元测试" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -270,8 +287,12 @@
       </breakpoints>
     </breakpoint-manager>
   </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/JavaAndKt$TestUnit.ic" NAME="TestUnit 覆盖结果" MODIFIED="1686298939308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/JavaAndKt$TestUnit.ic" NAME="LinkedTest 覆盖结果" MODIFIED="1686308951259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.location.java.algorithm.linkedlist.*</FILTER>
     </SUITE>
   </component>
