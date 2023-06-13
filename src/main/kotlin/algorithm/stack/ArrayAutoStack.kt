@@ -2,7 +2,9 @@
 
 package algorithm.stack
 
-
+/**
+ * 使用数组实现的自动扩容的栈
+ */
 class ArrayAutoStack<T>(initCapacity:Int = 10) {
     private var array = arrayOfNulls<Any>(initCapacity)
     private var capacity:Int = initCapacity

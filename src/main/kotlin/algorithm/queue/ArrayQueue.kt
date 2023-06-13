@@ -2,6 +2,9 @@
 
 package algorithm.queue
 
+/**
+ * 使用数组实现的自动扩容的无限队列
+ */
 class ArrayQueue<T>(initCapacity:Int) :Queue<T> {
     private var count = 0
     private var capacity = initCapacity

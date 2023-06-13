@@ -2,6 +2,9 @@
 
 package algorithm.queue
 
+/**
+ * 使用数组实现的循环队列 有限容量
+ */
 class ArrayRingQueue<T>(private val capacity: Int) : Queue<T> {
     private var count = 0
     private var head = -1

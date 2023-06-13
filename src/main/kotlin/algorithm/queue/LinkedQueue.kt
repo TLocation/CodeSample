@@ -2,7 +2,9 @@
 
 package algorithm.queue
 
-
+/**
+ * 使用链表实现的无限队列
+ */
 class LinkedQueue<T : Any> : Queue<T>{
     override val size: Int
         get() = mSize

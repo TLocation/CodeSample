@@ -1,5 +1,8 @@
 package algorithm.stack
 
+/**
+ * 使用数组实现的栈 有限容量
+ */
 class ArrayStack(private val capacity:Int) {
     private val array = IntArray(capacity)
     private var count:Int = 0
