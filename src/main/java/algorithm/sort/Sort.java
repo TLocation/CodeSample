@@ -201,14 +201,48 @@ public class Sort {
         return newArray;
     }
 
+    /**
+     * 快速排序
+     * 1.选择一个基准值
+     * 2.将数组分为两部分 一部分比基准值小 一部分比基准值大
+     * 3.递归的对两部分进行排序
+     * @param array
+     * @param start
+     * @param end
+     */
+    public static void quickSort(int[] array, int start, int end){
+        if((end - start) <= 0){
+            return;
+        }
+        int qIndex = end;
+        int q = array[qIndex];
+        int temp;
+        for(int i = start; i < end; i++){
+            if((array[i] > q && i < qIndex) || (array[i] < q && i > qIndex)){
+                temp = array[i];
+                array[qIndex] = temp;
+                array[i] = q;
+                qIndex = i;
+            }
+        }
+        quickSort(array, start, qIndex - 1);
+        quickSort(array, qIndex + 1, end);
+    }
+
+
+
     public static void main(String[] args) {
 //        int[] array = new int[]{10,8,3,2,9};
 //        selectSort(array);
 //        System.out.println(Arrays.toString(array));
 
-        int[] array = new int[]{8,2,6,1};
-        int[] ints = mergeSort(array, 0, array.length - 1);
-        System.out.println(Arrays.toString(ints));
+//        int[] array = new int[]{8,2,6,1};
+//        int[] ints = mergeSort(array, 0, array.length - 1);
+//        System.out.println(Arrays.toString(ints));
+
+        int[] array = new int[]{6,11,3,9};
+        quickSort(array, 0, array.length - 1);
+        System.out.println(Arrays.toString(array));
 
     }
 
